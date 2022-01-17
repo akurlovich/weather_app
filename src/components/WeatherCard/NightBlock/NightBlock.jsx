@@ -44,13 +44,13 @@ export default function NightBlock() {
       </div>
       <div className={classes.temp__options}>
         <div className={classes.temp__value_small}>
-          <img className={classes.temp__image} src='/icons/Wind.png' alt='img'>
+          <img className={classes.temp__image} src='icons/Wind.png' alt='img'>
 
           </img>
           <div>{cityNightWind.Speed.Value} km/h, {cityNightWind.Direction.Localized}</div>
         </div>
         <div className={classes.temp__value_small}>
-          <img className={classes.temp__image} src='/icons/rain.png' alt='img'></img>
+          <img className={classes.temp__image} src='icons/rain.png' alt='img'></img>
           <div>{cityNightRain.Value} mm</div>
         </div>
         <div className={classes.temp__value_small}>

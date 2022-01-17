@@ -49,12 +49,12 @@ export default function CardSmall({item}) {
         </div>
         <div className={classes.temp__options}>
           <div className={classes.temp__value_small}>
-            <img className={classes.temp__image} src='/icons/Wind.png' alt='img'>
+            <img className={classes.temp__image} src='icons/Wind.png' alt='img'>
             </img>
             <div>{Math.ceil(windSpeed)} km/h, {windDirection}</div>
           </div>
           <div className={classes.temp__value_small}>
-            <img className={classes.temp__image} src='/icons/rain.png' alt='img'></img>
+            <img className={classes.temp__image} src='icons/rain.png' alt='img'></img>
             <div>{rain} mm</div>
           </div>
           <div className={classes.temp__value_small}>

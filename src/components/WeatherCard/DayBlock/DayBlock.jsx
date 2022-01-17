@@ -44,13 +44,13 @@ export default function DayBlock() {
       </div>
       <div className={classes.temp__options}>
         <div className={classes.temp__value_small}>
-          <img className={classes.temp__image} src='/icons/Wind.png' alt='img'>
+          <img className={classes.temp__image} src='icons/Wind.png' alt='img'>
 
           </img>
           <div>{cityDayWind.Speed.Value} km/h, {cityDayWind.Direction.Localized}</div>
         </div>
         <div className={classes.temp__value_small}>
-          <img className={classes.temp__image} src='/icons/rain.png' alt='img'></img>
+          <img className={classes.temp__image} src='icons/rain.png' alt='img'></img>
           <div>{cityDayRain.Value} mm</div>
         </div>
         <div className={classes.temp__value_small}>
