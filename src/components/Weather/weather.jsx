@@ -24,7 +24,7 @@ function Weather() {
     dispatch(fetchIP());
     dispatch(fetchCityUI());
     // dispatch(fiveDay());
-  }, []);
+  }, [dispatch]);
 
   // const getWeather = async () => {
   //   const res = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${cityUI}?apikey=${API_KEY}&details=true&metric=true`);
