@@ -1,0 +1,44 @@
+.weather__item {
+  width: 320px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: greenyellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+
+}
+
+.item__ title {
+
+}
+
+.item__block {
+  display: flex;
+  gap: 20px;
+}
+
+.item__image {
+  /* width: 30px; */
+  /* height: 30px; */
+  /* background-color: grey; */
+}
+
+.item__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.item__info__temp {
+  display: flex;
+
+}
+
+.item__info__minmax {
+  display: flex;
+}
