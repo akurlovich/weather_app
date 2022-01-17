@@ -1,23 +1,24 @@
 import React, { useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import WeatherCard from '../WeatherCard/WeatherCard.jsx';
-import axios from 'axios';
+// import axios from 'axios';
 import classes from './Weather.module.css';
 import Loader from '../UI/Loader/Loader.jsx';
 import PopUp from '../UI/PopUp/PopUp';
+import { fetchCityUI, fetchIP } from '../../store/citySlice.js';
 
 function Weather() {
   
-  const cityUI = '28580';
+  // const cityUI = '28580';
 
-  const API_KEY = 'COTk1PPFKxAfDAcm0YhYhDaTjhtn73GR';
+  // const API_KEY = 'COTk1PPFKxAfDAcm0YhYhDaTjhtn73GR';
 
   const {status, cityShow, popUpShow} = useSelector(state => state.cities);
 
   // const {weatherArr, threeDays} = useSelector(state => state.weather);
   // const temper = useSelector(state => state.cities.temperature);
   
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   
   useEffect(() => {
     dispatch(fetchIP());
