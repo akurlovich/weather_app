@@ -12,23 +12,23 @@ function Weather() {
 
   const API_KEY = 'COTk1PPFKxAfDAcm0YhYhDaTjhtn73GR';
 
-  const {cityArr: citys, status, cityShow, popUpShow} = useSelector(state => state.cities);
+  const {status, cityShow, popUpShow} = useSelector(state => state.cities);
 
   // const {weatherArr, threeDays} = useSelector(state => state.weather);
   // const temper = useSelector(state => state.cities.temperature);
   
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   
   useEffect(() => {
-    // dispatch(fetchIP());
-    // dispatch(fetchCityUI());
+    dispatch(fetchIP());
+    dispatch(fetchCityUI());
     // dispatch(fiveDay());
   }, []);
 
-  const getWeather = async () => {
-    const res = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${cityUI}?apikey=${API_KEY}&details=true&metric=true`);
-    console.log(res.data);    
-  };
+  // const getWeather = async () => {
+  //   const res = await axios.get(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${cityUI}?apikey=${API_KEY}&details=true&metric=true`);
+  //   console.log(res.data);    
+  // };
 
   // const showWeather = async () => {
   //   await getWeather();
