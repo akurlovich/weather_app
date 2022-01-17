@@ -1,5 +1,4 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
-import axios from 'axios';
 import { getCityByIP, getCityUI, getWeather } from '../userAPI';
 
 export const fetchIP = createAsyncThunk(

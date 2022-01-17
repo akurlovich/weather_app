@@ -8,7 +8,7 @@ import classes from './WeatherCard.module.css';
 import CardSmall from './CardSmall/CardSmall';
 
 function WeatherCard() {
-  const {cityByIP, cityDate, cityArr, weatherArr, threeDays, cityShow, cityShow1Day, cityShow3Day, cityShow5Day} = useSelector(state => state.cities);
+  const {cityByIP, cityDate, weatherArr, threeDays, cityShow1Day, cityShow3Day, cityShow5Day} = useSelector(state => state.cities);
 
   const dispatch = useDispatch();
   // const {weatherArr, threeDays} = useSelector(state => state.weather);

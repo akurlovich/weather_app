@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {addTemperature, fetchCityUI, fetchIP} from '../../store/citySlice';
 import WeatherCard from '../WeatherCard/WeatherCard.jsx';
 import axios from 'axios';
 import classes from './Weather.module.css';
 import Loader from '../UI/Loader/Loader.jsx';
-import { fiveDay } from '../../store/weatherSlice';
 import PopUp from '../UI/PopUp/PopUp';
 
 function Weather() {
@@ -14,7 +12,7 @@ function Weather() {
 
   const API_KEY = 'COTk1PPFKxAfDAcm0YhYhDaTjhtn73GR';
 
-  const {cityArr: citys, temperature: temper, error: showError, status, cityByIP, cityDay, cityTemp, cityDate, cityShow, weatherArr, threeDays, popUpShow} = useSelector(state => state.cities);
+  const {cityArr: citys, status, cityShow, popUpShow} = useSelector(state => state.cities);
 
   // const {weatherArr, threeDays} = useSelector(state => state.weather);
   // const temper = useSelector(state => state.cities.temperature);
@@ -32,34 +30,34 @@ function Weather() {
     console.log(res.data);    
   };
 
-  const showWeather = async () => {
-    await getWeather();
-  };
+  // const showWeather = async () => {
+  //   await getWeather();
+  // };
 
-  const showIP = async () => {
-    const res = await axios.get('http://api.db-ip.com/v2/free/self');
-    console.log(res.data);
-  };
+  // const showIP = async () => {
+  //   const res = await axios.get('http://api.db-ip.com/v2/free/self');
+  //   console.log(res.data);
+  // };
 
-  const showCity = () => {
-    console.log(citys);
-    // console.log(citys.DailyForecasts[0].Day);
-    // console.log(temper);
-    // dispatch(addTemperature('10000'));
-  };
-   const showName = async () => {
-    try{
-      const continents = await axios.get('http://dataservice.accuweather.com/locations/v1/regions?apikey=COTk1PPFKxAfDAcm0YhYhDaTjhtn73GR');
-      console.log(continents.data);
-      const countries = await axios.get('http://dataservice.accuweather.com/locations/v1/countries/eur?apikey=COTk1PPFKxAfDAcm0YhYhDaTjhtn73GR');
-      //http://dataservice.accuweather.com/locations/v1/cities/by/search?apikey=COTk1PPFKxAfDAcm0YhYhDaTjhtn73GR&q=minsk 
-      console.log(countries.data);
-      const ser = await axios.get('http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=COTk1PPFKxAfDAcm0YhYhDaTjhtn73GR&q=min');
-      console.log(ser.data);
-    }catch(err){
-      console.error(err);
-    }
-   }
+  // const showCity = () => {
+  //   console.log(citys);
+  //   // console.log(citys.DailyForecasts[0].Day);
+  //   // console.log(temper);
+  //   // dispatch(addTemperature('10000'));
+  // };
+  //  const showName = async () => {
+  //   try{
+  //     const continents = await axios.get('http://dataservice.accuweather.com/locations/v1/regions?apikey=COTk1PPFKxAfDAcm0YhYhDaTjhtn73GR');
+  //     console.log(continents.data);
+  //     const countries = await axios.get('http://dataservice.accuweather.com/locations/v1/countries/eur?apikey=COTk1PPFKxAfDAcm0YhYhDaTjhtn73GR');
+  //     //http://dataservice.accuweather.com/locations/v1/cities/by/search?apikey=COTk1PPFKxAfDAcm0YhYhDaTjhtn73GR&q=minsk 
+  //     console.log(countries.data);
+  //     const ser = await axios.get('http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=COTk1PPFKxAfDAcm0YhYhDaTjhtn73GR&q=min');
+  //     console.log(ser.data);
+  //   }catch(err){
+  //     console.error(err);
+  //   }
+  //  }
 
 
   return (

@@ -9,7 +9,6 @@ export const getCityByIP = async () => {
   return await axios.get('http://api.db-ip.com/v2/free/self')
 };
 
-const cityUI = '28580';
 
 export const getCityUI = async (city) => {
   return await axios.get(`http://dataservice.accuweather.com/locations/v1/cities/search?apikey=COTk1PPFKxAfDAcm0YhYhDaTjhtn73GR&q=${city}`);  
