@@ -7,7 +7,7 @@ export default function DayBlock() {
   const tempMax = cityTemp.Maximum.Value;
   const tempMin = cityTemp.Minimum.Value;
   const temp = Math.ceil((tempMax + tempMin) / 2).toString();
-  const icon = `/icons/${(+cityDay.Icon > 9) ? cityDay.Icon : '0'+cityDay.Icon}-s.png`;
+  const icon = `/weather_app/icons/${(+cityDay.Icon > 9) ? cityDay.Icon : '0'+cityDay.Icon}-s.png`;
 
   return (
     <div className={classes.card__block_day}> 

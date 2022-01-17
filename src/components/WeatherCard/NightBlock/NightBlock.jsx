@@ -7,7 +7,7 @@ export default function NightBlock() {
   const tempMax = cityTemp.Maximum.Value;
   const tempMin = cityTemp.Minimum.Value;
   const temp = Math.ceil(tempMin).toString();
-  let icon = `/icons/${(+cityNight.Icon > 9) ? cityNight.Icon : '0'+cityNight.Icon}-s.png`;
+  let icon = `/weather_app/icons/${(+cityNight.Icon > 9) ? cityNight.Icon : '0'+cityNight.Icon}-s.png`;
 
   return (
     <div className={classes.card__block_night}>    

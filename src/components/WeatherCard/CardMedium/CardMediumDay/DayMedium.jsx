@@ -12,7 +12,7 @@ export default function DayMedium(props) {
   const rain = props.day.Rain.Value;
   const snow = props.day.Snow.Value;
 
-  const icon = `/icons/${(+props.day.Icon > 9) ? props.day.Icon : '0'+props.day.Icon}-s.png`;
+  const icon = `/weather_app/icons/${(+props.day.Icon > 9) ? props.day.Icon : '0'+props.day.Icon}-s.png`;
   
   return (
     <div className={classes.card__block_day}>    

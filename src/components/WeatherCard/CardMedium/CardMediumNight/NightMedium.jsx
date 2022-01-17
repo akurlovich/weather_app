@@ -11,7 +11,7 @@ export default function NightMedium(props) {
   const rain = props.night.Rain.Value;
   const snow = props.night.Snow.Value;
 
-  const icon = `/icons/${(+props.night.Icon > 9) ? props.night.Icon : '0'+props.night.Icon}-s.png`;
+  const icon = `/weather_app/icons/${(+props.night.Icon > 9) ? props.night.Icon : '0'+props.night.Icon}-s.png`;
 
   return (
     <div className={classes.card__block_night}>    

@@ -4,7 +4,7 @@ import classes from './CardSmall.module.css';
 export default function CardSmall({item}) {
   // console.log(item);
   const dayDate = new Date(item.Date).toDateString();
-  const icon = `/icons/${(+item.Day.Icon > 9) ? item.Day.Icon : '0'+item.Day.Icon}-s.png`;
+  const icon = `/weather_app/icons/${(+item.Day.Icon > 9) ? item.Day.Icon : '0'+item.Day.Icon}-s.png`;
   const tempMin = item.Temperature.Minimum.Value;
   const tempMax = item.Temperature.Maximum.Value; 
   const temp = Math.ceil((tempMin + tempMax) / 2).toString();
